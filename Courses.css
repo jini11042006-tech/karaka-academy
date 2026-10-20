@@ -1,0 +1,372 @@
+/* =========================================
+   KARKA CAREER TRACKS PAGE
+========================================= */
+
+.courses-page {
+  min-height: 100vh;
+  padding: 105px 4.5% 70px;
+  overflow: hidden;
+  color: #ffffff;
+  background:
+    radial-gradient(
+      ellipse at 5% 10%,
+      rgba(112, 35, 220, 0.17),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 95% 20%,
+      rgba(34, 65, 220, 0.13),
+      transparent 32%
+    ),
+    #050711;
+}
+
+/* HERO */
+
+.courses-hero {
+  max-width: 850px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.courses-eyebrow {
+  color: #c052ff;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.courses-hero h1 {
+  margin: 12px 0 18px;
+  font-size: clamp(42px, 6vw, 66px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.courses-hero h1 strong {
+  color: #a855f7;
+  background: linear-gradient(90deg, #c026ff, #6648ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.courses-hero p {
+  color: #b6bfd7;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* COURSE GRID */
+
+.courses-grid {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* COURSE CARD */
+
+.course-visual-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #242b49;
+  border-radius: 14px;
+  background: rgba(7, 11, 26, 0.92);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.course-visual-card:hover {
+  transform: translateY(-6px);
+  border-color: #a855f7;
+  box-shadow: 0 15px 40px rgba(112, 35, 220, 0.18);
+}
+
+/* IMAGE */
+
+.course-image {
+  position: relative;
+  height: 185px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(123, 54, 255, 0.22),
+      transparent 70%
+    ),
+    #080d20;
+}
+
+.course-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(7, 11, 26, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  opacity: 0.88;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.course-visual-card:hover .course-image img {
+  transform: scale(1.07);
+  opacity: 1;
+}
+
+.course-number {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 30px;
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  border-radius: 7px;
+  background: rgba(5, 7, 17, 0.75);
+  color: #d8b4fe;
+  font-size: 11px;
+  font-weight: 800;
+  backdrop-filter: blur(8px);
+}
+
+/* CARD CONTENT */
+
+.course-card-content {
+  padding: 18px 17px 20px;
+}
+
+.course-card-content h2 {
+  min-height: 48px;
+  margin: 0 0 9px;
+  color: #f8f8ff;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.course-card-content p {
+  min-height: 75px;
+  margin: 0 0 12px;
+  color: #aab4d0;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* SKILLS */
+
+.course-skills {
+  min-height: 35px;
+  margin-bottom: 12px;
+  color: #828eb0;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* DIFFERENT CARD ACCENTS */
+
+.course-visual-card.purple .course-explore {
+  color: #c052ff;
+}
+
+.course-visual-card.blue .course-explore {
+  color: #4e9dff;
+}
+
+.course-visual-card.cyan .course-explore {
+  color: #22d3ee;
+}
+
+.course-visual-card.yellow .course-explore {
+  color: #facc15;
+}
+
+.course-visual-card.pink .course-explore {
+  color: #f472e8;
+}
+
+/* EXPLORE LINK */
+
+.course-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: gap 0.25s ease;
+}
+
+.course-explore span {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.course-explore:hover {
+  gap: 18px;
+}
+
+/* BOTTOM CTA */
+
+.courses-bottom-cta {
+  max-width: 1000px;
+  margin: 75px auto 0;
+  padding: 45px 25px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 18px;
+  background:
+    radial-gradient(
+      ellipse at top,
+      rgba(112, 35, 220, 0.2),
+      transparent 75%
+    ),
+    #080a17;
+  text-align: center;
+}
+
+.courses-bottom-cta > span {
+  color: #c052ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.courses-bottom-cta h2 {
+  margin: 15px 0;
+  font-size: clamp(28px, 4vw, 43px);
+  line-height: 1.2;
+}
+
+.courses-bottom-cta h2 strong {
+  color: #b66bff;
+}
+
+.courses-bottom-cta p {
+  margin-bottom: 24px;
+  color: #aab4d0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.courses-cta-button {
+  display: inline-block;
+  padding: 14px 23px;
+  border-radius: 9px;
+  background: linear-gradient(100deg, #a020f0, #5145ff);
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.courses-cta-button:hover {
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(112, 35, 220, 0.3);
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .course-image {
+    height: 210px;
+  }
+
+  .course-card-content h2 {
+    min-height: auto;
+  }
+
+  .course-card-content p {
+    min-height: 65px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .courses-page {
+    padding: 100px 16px 45px;
+  }
+
+  .courses-hero {
+    margin-bottom: 28px;
+  }
+
+  .courses-hero h1 {
+    font-size: 39px;
+    letter-spacing: -1px;
+  }
+
+  .courses-hero p {
+    font-size: 13px;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .course-image {
+    height: 220px;
+  }
+
+  .course-card-content {
+    padding: 18px;
+  }
+
+  .course-card-content h2 {
+    font-size: 20px;
+  }
+
+  .course-card-content p {
+    min-height: auto;
+    font-size: 13px;
+  }
+
+  .course-skills {
+    min-height: auto;
+  }
+
+  .courses-bottom-cta {
+    margin-top: 45px;
+    padding: 35px 18px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .course-visual-card,
+  .course-image img,
+  .course-explore,
+  .courses-cta-button {
+    transition: none;
+  }
+}
